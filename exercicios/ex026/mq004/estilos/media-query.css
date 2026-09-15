@@ -2,3 +2,63 @@
 
     /* Todas as medias */
 
+@media print{
+        body{
+            font-family: 'Courier New', 
+        }
+
+        main{
+            border: 2px solid black;
+        }
+
+        main::after{
+            content: "Essa impressao foi feita pelo site www.nigga.com";
+        }
+
+
+        main h1{
+            text-shadow: none;
+            color: black;
+        }
+}
+
+@media screen and (min-width:577px) and (max-width: 768px)  {
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    #phone{
+        display: none;
+    }
+    #tablet{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    #table, #phone{
+        display: none;
+    }
+
+    #pc{
+        display: block;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    #phone, #table, #pc{
+        display: none;
+
+    }
+    #tv{
+        display: block;
+    }
+}
+
